@@ -44,16 +44,16 @@ const CodeEditor = ({ codeString, fileName = 'Example.jsx' }) => {
             </div>
 
             {/* Code Area */}
-            <div className="relative">
+            <div className="relative overflow-x-auto">
                 <SyntaxHighlighter
                     language="javascript"
                     style={vscDarkPlus}
                     showLineNumbers={true}
                     customStyle={{
                         margin: 0,
-                        padding: '1.5rem',
+                        padding: '1rem',
                         background: '#1e1e1e',
-                        fontSize: '14px',
+                        fontSize: '13px',
                         lineHeight: '1.5',
                     }}
                     lineNumberStyle={{

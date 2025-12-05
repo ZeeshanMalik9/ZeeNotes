@@ -105,7 +105,7 @@ const TopicPage = () => {
     );
 
     return (
-        <div className="flex min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
+        <div className="flex flex-col lg:flex-row min-h-screen w-full overflow-x-hidden bg-gray-50 dark:bg-black transition-colors duration-300">
             {/* Mobile Sidebar Toggle */}
             <button
                 onClick={() => setIsSidebarOpen(true)}
@@ -144,7 +144,7 @@ const TopicPage = () => {
             </aside>
 
             {/* Main Content Area */}
-            <main className="flex-1 lg:ml-72 min-h-screen">
+            <main className="flex-1 lg:ml-72 min-h-screen min-w-0">
                 <div className="max-w-4xl mx-auto p-4 md:p-8 lg:p-12">
                     <ScrollReveal>
                         <motion.div
@@ -153,7 +153,7 @@ const TopicPage = () => {
                             transition={{ duration: 0.5 }}
                             className="mb-16 text-center lg:text-left"
                         >
-                            <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
+                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-4">
                                 <span className="text-blue-600 dark:text-blue-400 font-mono text-sm tracking-wide uppercase">
                                     React Mastery
                                 </span>
@@ -176,7 +176,7 @@ const TopicPage = () => {
                                 </button>
                             </div>
 
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">
+                            <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight break-words">
                                 {topic.title}
                             </h1>
                             <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto lg:mx-0" />
