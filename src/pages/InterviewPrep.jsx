@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronDown, FaLightbulb, FaReact, FaArrowLeft } from 'react-icons/fa';
-import { courses } from '../data';
+import { courses } from '../reactjsData';
 
 const TopicCard = ({ course, onClick }) => {
     return (

@@ -61,6 +61,15 @@ const Navbar = ({ isDark, toggleTheme }) => {
                                                     <div className="text-xs text-gray-500 dark:text-gray-400">The library for web and native user interfaces</div>
                                                 </div>
                                             </Link>
+                                            <Link to="/topic/java-inheritance" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
+                                                <div className="p-2 bg-orange-500/10 rounded-lg group-hover:bg-orange-500/20 transition-colors">
+                                                    <FaBook className="text-orange-600 dark:text-orange-400 text-xl" />
+                                                </div>
+                                                <div>
+                                                    <div className="font-semibold text-gray-900 dark:text-white">Java Masterclass</div>
+                                                    <div className="text-xs text-gray-500 dark:text-gray-400">Master Java from internals to enterprise</div>
+                                                </div>
+                                            </Link>
                                             {/* Add more tech here later */}
                                         </div>
                                     </motion.div>

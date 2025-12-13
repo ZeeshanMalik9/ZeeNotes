@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useOutletContext, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaCheckCircle, FaTimes } from 'react-icons/fa';
-import { courses } from '../data';
+import { courses } from '../reactjsData';
 import useCourseProgress from '../hooks/useCourseProgress';
 
 // Legacy Blocks (still used for Theory/Example content)
 import TheoryBlock from '../components/blocks/TheoryBlock';
 import ExampleBlock from '../components/blocks/ExampleBlock';
+import TableBlock from '../components/blocks/TableBlock';
 
 // New High-End UI Components
 import CodeEditor from '../components/ui/CodeEditor';
@@ -196,6 +197,8 @@ const TopicPage = () => {
                                         return <DiagramRenderer definition={block.definition} isDarkMode={isDark} />;
                                     case 'example':
                                         return <ExampleBlock {...block} />;
+                                    case 'table':
+                                        return <TableBlock {...block} />;
                                     default:
                                         return null;
                                 }

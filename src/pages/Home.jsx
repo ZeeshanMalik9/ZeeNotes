@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
-import { FaReact, FaArrowRight } from 'react-icons/fa';
-import { courses } from '../data';
+import { FaReact, FaJava, FaArrowRight } from 'react-icons/fa';
+import { courses } from '../reactjsData';
 
 const TiltCard = ({ course }) => {
     const x = useMotionValue(0);
@@ -52,7 +52,11 @@ const TiltCard = ({ course }) => {
             >
                 <div>
                     <div className="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <FaReact className="text-4xl text-blue-400" />
+                        {course.icon === 'FaJava' ? (
+                            <FaJava className="text-4xl text-orange-400" />
+                        ) : (
+                            <FaReact className="text-4xl text-blue-400" />
+                        )}
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {course.title}
