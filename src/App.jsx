@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+
 import TopicPage from './pages/TopicPage';
+import DSAPage from './pages/DSAPage';
 import InterviewPrep from './pages/InterviewPrep';
 import LoadingScreen from './components/ui/LoadingScreen';
 
@@ -31,6 +33,7 @@ function App() {
                         <Route path="/" element={<Layout />}>
                             <Route index element={<Home />} />
                             <Route path="topic/:topicId" element={<TopicPage />} />
+                            <Route path="dsa/:topicId" element={<DSAPage />} />
                             <Route path="interview-prep" element={<InterviewPrep />} />
                         </Route>
                     </Routes>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaReact, FaMoon, FaSun, FaChevronDown, FaBook } from 'react-icons/fa';
+import { FaReact, FaMoon, FaSun, FaChevronDown, FaBook, FaCode } from 'react-icons/fa';
 
 const Navbar = ({ isDark, toggleTheme }) => {
     const [isTechOpen, setIsTechOpen] = useState(false);
@@ -70,7 +70,15 @@ const Navbar = ({ isDark, toggleTheme }) => {
                                                     <div className="text-xs text-gray-500 dark:text-gray-400">Master Java from internals to enterprise</div>
                                                 </div>
                                             </Link>
-                                            {/* Add more tech here later */}
+                                            <Link to="/dsa/array" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
+                                                <div className="p-2 bg-green-500/10 rounded-lg group-hover:bg-green-500/20 transition-colors">
+                                                    <FaCode className="text-green-600 dark:text-green-400 text-xl" />
+                                                </div>
+                                                <div>
+                                                    <div className="font-semibold text-gray-900 dark:text-white">DSA Masterclass</div>
+                                                    <div className="text-xs text-gray-500 dark:text-gray-400">Algorithms & Data Structures</div>
+                                                </div>
+                                            </Link>
                                         </div>
                                     </motion.div>
                                 )}
@@ -148,7 +156,22 @@ const Navbar = ({ isDark, toggleTheme }) => {
                                     <FaReact className="text-blue-500" />
                                     <span>React.js</span>
                                 </Link>
-                                {/* Add more courses here */}
+                                <Link
+                                    to="/dsa"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+                                >
+                                    <FaCode className="text-green-500" />
+                                    <span>DSA Masterclass</span>
+                                </Link>
+                                <Link
+                                    to="/topic/java-inheritance"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+                                >
+                                    <FaBook className="text-orange-500" />
+                                    <span>Java Masterclass</span>
+                                </Link>
                             </div>
 
                             <Link

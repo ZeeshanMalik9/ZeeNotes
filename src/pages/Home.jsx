@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
-import { FaReact, FaJava, FaArrowRight } from 'react-icons/fa';
+import { FaReact, FaJava, FaArrowRight, FaCode } from 'react-icons/fa';
 import { courses } from '../reactjsData';
 
 const TiltCard = ({ course }) => {
@@ -54,6 +54,8 @@ const TiltCard = ({ course }) => {
                     <div className="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         {course.icon === 'FaJava' ? (
                             <FaJava className="text-4xl text-orange-400" />
+                        ) : course.icon === 'FaCode' ? (
+                            <FaCode className="text-4xl text-green-400" />
                         ) : (
                             <FaReact className="text-4xl text-blue-400" />
                         )}
@@ -100,7 +102,11 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center max-w-7xl mx-auto">
                 {courses.map((course) => (
-                    <Link to={`/topic/${course.topics[0].id}`} key={course.id} className="w-full flex justify-center">
+                    <Link
+                        to={course.id === 'dsa-mastery' ? `/dsa/${course.topics[0].id}` : `/topic/${course.topics[0].id}`}
+                        key={course.id}
+                        className="w-full flex justify-center"
+                    >
                         <TiltCard course={course} />
                     </Link>
                 ))}

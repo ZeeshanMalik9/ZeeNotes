@@ -2557,6 +2557,7 @@ const React = (function() {
 ];
 
 import { javaCourse } from './javaData';
+import { dsaCourse } from './dsaData';
 
 export const courses = [
   {
@@ -2657,5 +2658,6 @@ Think of **Declarative** as Uber: You just set the destination ("I want to go to
       ...expertInternalsData
     ]
   },
+  dsaCourse,
   javaCourse
 ];
